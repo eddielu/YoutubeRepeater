@@ -4,20 +4,20 @@
     "version": "0.1",
     "description": "Allows you to repeat youtube videos if you are using HTML5",
     "icons": {
-        "128": "icon.jpg"
+        "128": "img/icon.jpg"
     },
     "page_action": {
-        "default_icon": "icon.jpg",
+        "default_icon": "img/icon.jpg",
         "default_title": "Youtube Repeater"
     },
     "background": {
-        "scripts": ["bg.js"],
+        "scripts": ["/background/bg.js"],
         "persistent": false
     },
     "content_scripts": [
         {
             "matches":["https://www.youtube.com/*"],
-            "js": ["jquery-2.1.3.min.js", "repeater.js"]
+            "js": ["content_scripts/jquery-2.1.3.min.js", "content_scripts/repeater.js"]
         }
     ]
 }
