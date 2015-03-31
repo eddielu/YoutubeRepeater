@@ -4,10 +4,10 @@
     "version": "0.1",
     "description": "Allows you to repeat youtube videos if you are using HTML5",
     "icons": {
-        "128": "img/icon.jpg"
+        "128": "img/favicon-32x32.png"
     },
     "page_action": {
-        "default_icon": "img/icon.jpg",
+        "default_icon": "img/favicon-32x32.png",
         "default_title": "Youtube Repeater"
     },
     "background": {
