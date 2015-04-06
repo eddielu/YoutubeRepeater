@@ -20,5 +20,8 @@
             "matches":["https://www.youtube.com/*"],
             "js": ["content_scripts/jquery-2.1.3.min.js", "content_scripts/repeater.js"]
         }
+    ],
+    "permissions": [
+        "tabs"
     ]
 }
