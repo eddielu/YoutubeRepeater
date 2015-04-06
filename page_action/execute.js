@@ -3,10 +3,13 @@ var setRepeat = function (toRepeat) {
         var port = chrome.tabs.connect(tabs[0].id);
         port.postMessage({"repeat":toRepeat});
         port.onMessage.addListener(function (msg) {
-            if (msg.repeatStatus == toRepeat)
+            if (msg.repeatStatus == toRepeat) {
                 console.warn("Worked great!");
-            else
+                $("input")[0].checked = msg.repeatStatus;
+            }
+            else {
                 console.warn("Something went wrong!");
+            }
         });
     });
 };
@@ -16,10 +19,11 @@ var toggleRepeat = function (element) {
 };
 
 
+
 $(document).ready(function () {
     debugger;
     $("label").first().html("Repeat Video:");
     $("input").first().click(function () {
         toggleRepeat($(this))
-    })
+    });
 });
